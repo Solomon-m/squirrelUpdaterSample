@@ -1,4 +1,4 @@
-{
+ {
   "name": "squirrelupdater",
   "productName": "squirrelupdater",
   "version": "1.0.0",
@@ -27,22 +27,33 @@
         ]
       },
       "electronPackagerConfig": {
-        "arch": "x64",
-        "app-version": "com.solomon.squirrelupdater",
-        "build-version": "1.0.0",
-        "icon": "/Users/solomon/Desktop/DMG/backup/pic/aww.icns",
-        "name": "squirrelupdater",
-        "overwrite": true,
-        "platform": "darwin",
-        "protocol": [
-          "forge"
-        ],
-        "protocol-name": [
-          "squirrelupdater protocol"
-        ]
+         "asar": true,
+         "electronVersion": "1.4.4",
+         "icon": "F:\\solomon\\files\\AW_install_icon.ico",
+         "platform":"win32",
+         "arch":"ia32",
+         "version":1.0,
+         "out":"F:\\solomon\\codebase\\squirrelUpdaterSample\\out",
+         "build-version":1.0,
+         "version-string.CompanyName":"SB Inc",
+         "version-string.ProductName":"Squirrelupdater",
+         "version-string.FileDescription":"Squirrelupdater",
+         "version-string.InternalName":"Squirrelupdater.exe",
+         "version-string.LegalCopyright":"Copyright (C) 2016 SB, Inc. All rights reserved.",
+         "overwrite":"true",
+         "version-string.OriginalFilename":"Squirrelupdater.exe",
+         "app-version":"1.0.0",
+         "version-string.ProductVersion":"1.0.0",
+         "version-string.FileVersion":"1.0.0"
         },
       "electronWinstallerConfig": {
-        "name": "squirrelupdater"
+        "name": "com.squirrel.squirrelupdater.squirrelupdater",
+        "exe": "squirrelupdater.exe",
+        "noMsi": true,
+        "setupExe": "squirrelupdaterSetup.exe",
+        "iconUrl": "F:\\solomon\\files\\AW_install_icon.ico",
+        "setupIcon": "F:\\solomon\\files\\AW_install_icon.ico",
+        "loadingGif": "F:\\solomon\\files\\balls.gif"
       },
       "electronInstallerDebian": {},
       "electronInstallerRedhat": {},
