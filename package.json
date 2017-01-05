@@ -6,7 +6,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "sign":"electron-installer-codesign out/squirrelupdater-darwin-x64/squirrelupdater.app/ \"U6EUGX9769\" --debug --overwrite"
   },
   "keywords": [],
   "author": "solomon",
@@ -25,7 +26,21 @@
           "rpm"
         ]
       },
-      "electronPackagerConfig": {},
+      "electronPackagerConfig": {
+        "arch": "x64",
+        "app-version": "com.solomon.squirrelupdater",
+        "build-version": "1.0.0",
+        "icon": "/Users/solomon/Desktop/DMG/backup/pic/aww.icns",
+        "name": "squirrelupdater",
+        "overwrite": true,
+        "platform": "darwin",
+        "protocol": [
+          "forge"
+        ],
+        "protocol-name": [
+          "squirrelupdater protocol"
+        ]
+        },
       "electronWinstallerConfig": {
         "name": "squirrelupdater"
       },
@@ -41,7 +56,11 @@
     }
   },
   "dependencies": {
-    "electron-compile": "^5.1.2"
+    "bunyan": "^1.8.5",
+    "electron-compile": "^5.1.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "rxjs": "^5.0.2"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.16.0",
